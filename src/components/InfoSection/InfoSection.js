@@ -29,7 +29,7 @@ function InfoSection() {
         const config = {
             'userName': localStorage.getItem('Name'),
         };
-        const response = await axios.post(`http://172.22.24.193/login`, config);
+        const response = await axios.post(`https://lazy-pear-python-garb.cyclic.app/login`, config);
         setName(response.data);
     }
 

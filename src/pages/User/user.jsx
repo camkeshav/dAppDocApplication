@@ -38,7 +38,7 @@ function User() {
 
     function handleSubmit(event) {
         event.preventDefault()
-        const url = `http://172.22.24.193/upload`;
+        const url = `https://lazy-pear-python-garb.cyclic.app/upload`;
         const formData = new FormData();
         formData.append('doc', file);
         formData.append('name', file.name);
@@ -63,7 +63,7 @@ function User() {
             }
         }
         try {
-            const response = await axios.get(`http://172.22.24.193/alldocs/${localStorage.getItem('Name')}`, heads);
+            const response = await axios.get(`https://lazy-pear-python-garb.cyclic.app/alldocs/${localStorage.getItem('Name')}`, heads);
             setDocs(response.data)
         } catch (error) {
             console.error(error);

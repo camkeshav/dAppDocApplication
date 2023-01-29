@@ -77,7 +77,7 @@ function Admin() {
         const config = {
             'username': localStorage.getItem('Name'),
         };
-        const response = await axios.patch(`http://172.22.24.193/verify/${hash}`, config);
+        const response = await axios.patch(`https://lazy-pear-python-garb.cyclic.app/verify/${hash}`, config);
         // alert(`${response.msg}`);
     }
 
@@ -85,7 +85,7 @@ function Admin() {
         const config = {
             'username': localStorage.getItem('Name'),
         };
-        const response = await axios.patch(`http://172.22.24.193/reject/${hash}`, config);
+        const response = await axios.patch(`https://lazy-pear-python-garb.cyclic.app/reject/${hash}`, config);
         const data = response.json();
         // alert(`${data.msg}`);
     }
@@ -99,7 +99,7 @@ function Admin() {
             }
         }
         try {
-            const response = await axios.get(`http://172.22.24.193/alldocs`, heads);
+            const response = await axios.get(`https://lazy-pear-python-garb.cyclic.app/alldocs`, heads);
             setDocs(response.data)
         } catch (error) {
             console.error(error);
