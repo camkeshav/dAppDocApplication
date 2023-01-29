@@ -11,7 +11,7 @@ function Frame() {
     return (
         <div>
             {/* {console.log("Hello")}; */}
-            <Iframe url={`https://${hash}.ipfs.dweb.link/${name}`}
+            <Iframe url={`https://${recData.hash}.ipfs.dweb.link/${recData.name}`}
                 width="800px"
                 height="800px"
                 id=""
