@@ -6,8 +6,7 @@ import { useState } from 'react';
 import axios from 'axios';
 
 import './styles.css';
-// import temp from './robot.png';
-import temp from './asset1.svg';
+import temp from './robot.png';
 import { log } from 'util';
 
 function InfoSection() {
@@ -50,7 +49,6 @@ function InfoSection() {
                             <TextWrapper>
                                 <form onSubmit={handleSubmit}>
                                     <h1>Document Management System</h1>
-                                    <p>dAppDoc Dar-Dar sirf document bhatkega app nahi !</p>
                                     <p className="role" >Your Role ?</p>
                                     <div className="radio">
                                         <label>
@@ -79,7 +77,8 @@ function InfoSection() {
                                                     event.preventDefault();
                                                     localStorage.setItem('Name', Name);
                                                     loginRequest();
-                                                }}>Enter</button>
+                                                    window.location = "/user"
+                                                } }>{`Enter`}</button>
 
                                             </div>
                                         }
@@ -92,7 +91,8 @@ function InfoSection() {
                                                     event.preventDefault();
                                                     localStorage.setItem('Name', Name);
                                                     loginRequest();
-                                                }}>Enter</button>
+                                                    window.location = "/admin"
+                                                }}>{`Enter`}</button>
                                             </div>
                                         }
                                     </div>
